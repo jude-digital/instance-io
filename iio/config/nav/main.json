@@ -1,0 +1,11 @@
+{
+  "name" : "Main Navigation",
+  "slug" : "main-nav",
+  "items" : [
+    {
+      "label" : "Home",
+      "url" : "/",
+      "sub" : null
+    }
+  ]
+}

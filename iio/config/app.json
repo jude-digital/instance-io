@@ -1,0 +1,36 @@
+{
+  "app-name" : "Instance IO App",
+  "app-slug" : "iio-app",
+  "version" : "2.0.0",
+  "assets-route" : "Assets",
+  "logo" : "",
+  "author" : "",
+  "title" : "",
+  "desc" : "",
+  "desc-short" : "",
+  "database" : [
+    {
+      "type" : "mongo",
+      "user" : null,
+      "pass" : null,
+      "port" : null,
+      "host" : null
+    }
+  ],
+  "sys-conf" :
+    {
+      "iio-start" : "{{%:",
+      "iio-end" : "}}",
+      "iio-comp-var" : "<iio>",
+      "iio-path" : "/webroot/iio/",
+      "public-path" : "/webroot/public/"
+    },
+  "hooks" : [
+    {
+      "name" : "default",
+      "controller" : "default",
+      "controller-name" : "DEFAULT_CONTROLLER",
+      "view" : "default-template"
+    }
+  ]
+}
