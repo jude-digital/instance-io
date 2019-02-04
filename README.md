@@ -17,7 +17,7 @@
 
 # Build Instructions
 ## Parse Component Styles
-* sudo cd iio/app/console/; bash run.sh parse-styles";
+* sudo cd iio/app/console/; bash run.sh parse-styles;
 
 ## Build Sitemap
 * sudo cd iio/app/console/; bash run.sh build-app sync;
