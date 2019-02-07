@@ -52,12 +52,15 @@ class CONFIG {
         }
       }
 
-
-      // - Main Nav Config:
-      $nav = file_get_contents( IIO . 'config/nav/main.json' );
-      $nav = json_decode($nav,true);
-
-      $navs = array('main-nav' => $nav['items']);
+      // -- Get All Navs From Config:
+      $navs_conf = $conf['navs'];
+      $navs_count = count($navs_conf);
+      $navs = [];
+      for($n=0;$n<$navs_count;$n++){
+        $this_nav = file_get_contents( IIO . 'config/nav/' . $navs_conf[$n] . '.json' );
+        $this_nav = json_decode($this_nav,true);
+        $navs[$this_nav['slug']] = $this_nav['items'];
+      }
 
       $config = array(
          'iio-start' => $iio_var_start,

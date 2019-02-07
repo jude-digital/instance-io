@@ -2,16 +2,16 @@
 
 class NAV {
 
-  function __construct($conf){
-    $this->nav = $this->build_nav($conf);
+  function __construct($conf,$name){
+    $this->nav = $this->build_nav($conf,$name);
   }
 
   function __toString(){
     return $this->nav;
   }
 
-  private function build_nav($conf){
-    $nav = $conf['nav']['main-nav'];
+  private function build_nav($conf,$name){
+    $nav = $conf['nav'][$name];
     $count = count($nav);
     $items = '';
     for($c=0;$c<$count;$c++){
