@@ -15,9 +15,26 @@
 * Nginx
 * Go
 
-# Build Instructions
+# Build Instructions (Single Command)
+
+## Build All At Once (Component Styles + Sitemap)
+```python
+sudo cd iio/app/console/; bash build.sh all;
+```
+
+## Build Only Component styles
+```python
+sudo cd iio/app/console/; bash build.sh;
+```
+
+# Build Instructions (Separate Commands)
+
 ## Parse Component Styles
-* sudo cd iio/app/console/; bash run.sh parse-styles;
+```python
+sudo cd iio/app/console/; bash run.sh parse-styles";
+```
 
 ## Build Sitemap
-* sudo cd iio/app/console/; bash run.sh build-app sync;
+```python
+sudo cd iio/app/console/; bash run.sh build-app sync;
+```
