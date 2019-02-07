@@ -1,0 +1,11 @@
+{
+  "name" : "Sub Navigation",
+  "slug" : "sub-nav",
+  "items" : [
+    {
+      "label" : "Test",
+      "url" : "/testing",
+      "sub" : null
+    }
+  ]
+}

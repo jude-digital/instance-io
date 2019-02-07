@@ -64,7 +64,15 @@ class PAGE {
       // TODO: Create function :
       //
       $page = str_replace($is.'assets-route'.$ie, $template, $page);
-      $page = str_replace($is.'nav'.$ie, new NAV($config), $page);
+
+      // -- Render All Navs:
+      $navs = $config['nav'];
+      $navs_count = count($navs);
+      $nav_slug = array_keys($navs);
+      for($n=0;$n<$navs_count;$n++){
+        $nav_name = $nav_slug[$n];
+        $page = str_replace($is.'nav:'.$nav_name.$ie, new NAV($config,$nav_name), $page);
+      }
 
       $vars = $config['vars'];
       $var_count = count($vars);

@@ -32,5 +32,6 @@
       "controller-name" : "DEFAULT_CONTROLLER",
       "view" : "default-template"
     }
-  ]
+  ],
+   "navs" : [ "main","sub" ]
 }
