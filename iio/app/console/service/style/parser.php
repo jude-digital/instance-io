@@ -37,6 +37,7 @@ class PARSE_STYLES {
     echo "\n\n----- Style Output ------\n\n";
 
     $styles = $this->minifyCSS($styles);
+    $styles = $this->parseStyleVars($styles,$config);
 
     echo $styles;
 
@@ -58,6 +59,16 @@ class PARSE_STYLES {
 
     return "\n\n".json_encode($component_files)."\n\n";
 
+
+  }
+
+
+  private function parseStyleVars($style,$config){
+
+      // -- Parse Asset Router :
+      $style = str_replace('{{%:assets-route}}',$config['assets-route'],$style);
+
+      return $style;
 
   }
 
