@@ -3,7 +3,7 @@
 class DEFAULT_CONTROLLER {
 
   function __construct($route){
-      $this->build = $this->WORK_BUILD($route);
+      $this->build = $this->DEFAULT_BUILD($route);
   }
 
   function __toString(){
